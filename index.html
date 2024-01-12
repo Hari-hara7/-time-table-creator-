@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Notes</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Smart Study Notes</h1>
+        <h1>Create Your Own Timetable</h1>
+        <link rel="stylesheet" href="style.css">
+    </header>
+
+    <main>
+        <div id="create-timetable">
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="Maths">Maths</option>
+                <option value="Physics">Physics</option>
+                <option value="cyber security">cyber security</option>
+                <option value="python">python</option>
+                <option value="java">java</option>
+                <option value="basic electronics">basic electronics</option>
+                <option value="English">English</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" name="startTime">
+
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" name="endTime">
+
+            <label for="days">Days:</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="checkbox" id="monday" name="days" value="Monday">
+                <label for="monday">Monday</label>
+
+                <input type="checkbox" id="tuesday" name="days" value="Tuesday">
+                <label for="tuesday">Tuesday</label>
+
+                <input type="checkbox" id="wednesday" name="days" value="Wednesday">
+                <label for="wednesday">Wednesday</label>
+
+                <input type="checkbox" id="thursday" name="days" value="Thursday">
+                <label for="thursday">Thursday</label>
+
+                <input type="checkbox" id="friday" name="days" value="Friday">
+                <label for="friday">Friday</label>
+            </div>
+
+            <button onclick="saveTimetable()">Save Timetable</button>
+            <button onclick="showTimetable()">View Timetable</button>
+        </div>
+
+        <div id="view-timetable" style="display: none;">
+            <h2>Your Timetable</h2>
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Days</th>
+                </tr>
+                <!-- Placeholder data, you would replace this with actual saved timetable data -->
+                <tr>
+                    <td>Maths</td>
+                    <td>2024-01-15</td>
+                    <td>10:00 AM</td>
+                    <td>11:30 AM</td>
+                    <td>Monday, Wednesday, Friday</td>
+                </tr>
+                <!-- Additional rows for each timetable entry -->
+            </table>
+            <button onclick="showCreateTimetable()">Back to Create Timetable</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        &copy; 2024 Smart Study Notes
+    </footer>
+
+   
+</body>
+</html>
